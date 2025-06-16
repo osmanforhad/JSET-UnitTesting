@@ -1,4 +1,5 @@
-const fetchData = require("./sum");
+const fetchPromise = require("./sum");
+//const fetchData = require("./sum");
 //const myFunction = require("./sum");
 //const sum = require("./sum");
 /**
@@ -55,14 +56,19 @@ const fetchData = require("./sum");
  */
 
 //writing test case for call back function
-test("the data is Mauntain Deu", (done) => {
-  function callback(data) {
-    try {
-      expect(data).toBe("Mauntain Deu");
-      done();
-    } catch (error) {
-      done(error);
-    }
-  }
-  fetchData(callback);
+// test("the data is Mauntain Deu", (done) => {
+//   function callback(data) {
+//     try {
+//       expect(data).toBe("Mauntain Deu");
+//       done();
+//     } catch (error) {
+//       done(error);
+//     }
+//   }
+//   fetchData(callback);
+// });
+
+//writing test case for promise based function
+test("the data is Mauntain Deu", () => {
+  return expect(fetchPromise()).resolves.toBe("Mauntain Deu");
 });

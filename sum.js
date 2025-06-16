@@ -12,9 +12,17 @@
 // module.exports = myFunction;
 
 //call back function
-function fetchData(callback) {
-  setTimeout(() => {
-    callback("Mauntain Deu");
-  }, 1000);
+// function fetchData(callback) {
+//   setTimeout(() => {
+//     callback("Mauntain Deu");
+//   }, 1000);
+// }
+// module.exports = fetchData;
+
+//function which return a promise
+function fetchPromise() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => resolve("Mauntain Deu"), 1000);
+  });
 }
-module.exports = fetchData;
+module.exports = fetchPromise;
