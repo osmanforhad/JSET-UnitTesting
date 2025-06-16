@@ -1,0 +1,2 @@
+to initiate the npm project = npm init -y
+to install the jest package = npm install --save-dev jest

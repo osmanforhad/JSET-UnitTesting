@@ -86,9 +86,22 @@
 /**
  * Mock functin Testing Technique
  */
-test("implemention of a basic mock function", () => {
-  const mock = jest.fn((x) => 42 + x);
-  expect(mock(1)).toBe(43);
-  //passing argument for mock function
-  expect(mock).toHaveBeenCalledWith(1);
+// test("implemention of a basic mock function", () => {
+//   const mock = jest.fn((x) => 42 + x);
+//   expect(mock(1)).toBe(43);
+//passing argument for mock function
+//   expect(mock).toHaveBeenCalledWith(1);
+// });
+
+//writing test case for Spies
+test("spying on a method of an object", () => {
+  const video = {
+    play() {
+      return true;
+    },
+  };
+  const spy = jest.spyOn(video, "play");
+  video.play();
+  expect(spy).toHaveBeenCalled();
+  spy.mockRestore();
 });
