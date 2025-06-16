@@ -1,3 +1,4 @@
+const myFunction = require("./sum");
 /**
  * test function cotain a description
  * and
@@ -33,7 +34,14 @@
 // });
 
 //writing test case for true value
-test("one is truthy", () => {
-  const n = 1;
-  expect(n).toBeTruthy();
+// test("one is truthy", () => {
+//   const n = 1;
+//   expect(n).toBeTruthy();
+// });
+
+//writing test case for throw error
+test("throws on invalid input", () => {
+  expect(() => {
+    myFunction("jhfjhsfh");
+  }).toThrow();
 });
