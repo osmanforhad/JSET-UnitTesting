@@ -72,3 +72,7 @@ const fetchPromise = require("./sum");
 test("the data is Mauntain Deu", () => {
   return expect(fetchPromise()).resolves.toBe("Mauntain Deu");
 });
+//writing test case if promise reject
+test("the fetch fails with an error", () => {
+  return expect(fetchPromise()).rejects.toThrow("error");
+});
