@@ -69,10 +69,16 @@ const fetchPromise = require("./sum");
 // });
 
 //writing test case for promise based function
-test("the data is Mauntain Deu", () => {
-  return expect(fetchPromise()).resolves.toBe("Mauntain Deu");
-});
+// test("the data is Mauntain Deu", () => {
+//   return expect(fetchPromise()).resolves.toBe("Mauntain Deu");
+// });
 //writing test case if promise reject
-test("the fetch fails with an error", () => {
-  return expect(fetchPromise()).rejects.toThrow("error");
+// test("the fetch fails with an error", () => {
+//   return expect(fetchPromise()).rejects.toThrow("error");
+// });
+
+//writing test case for async await
+test("the data is Mauntain Deu", async () => {
+  const data = await fetchPromise();
+  expect(data).toBe("Mauntain Deu");
 });
