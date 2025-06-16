@@ -78,7 +78,15 @@ const fetchPromise = require("./sum");
 // });
 
 //writing test case for async await
-test("the data is Mauntain Deu", async () => {
-  const data = await fetchPromise();
-  expect(data).toBe("Mauntain Deu");
+// test("the data is Mauntain Deu", async () => {
+//   const data = await fetchPromise();
+//   expect(data).toBe("Mauntain Deu");
+// });
+
+/**
+ * Mock functin Testing Technique
+ */
+test("implemention of a basic mock function", () => {
+  const mock = jest.fn((x) => 42 + x);
+  expect(mock(1)).toBe(43);
 });
