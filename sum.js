@@ -3,9 +3,18 @@
 // }
 // module.exports = sum;
 
-function myFunction(input) {
-  if (typeof input !== "number") {
-    throw new Error("Invalid Input");
-  }
+//error throwing function
+// function myFunction(input) {
+//   if (typeof input !== "number") {
+//     throw new Error("Invalid Input");
+//   }
+// }
+// module.exports = myFunction;
+
+//call back function
+function fetchData(callback) {
+  setTimeout(() => {
+    callback("Mauntain Deu");
+  }, 1000);
 }
-module.exports = myFunction;
+module.exports = fetchData;

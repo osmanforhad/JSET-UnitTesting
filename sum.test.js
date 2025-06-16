@@ -1,9 +1,13 @@
-const myFunction = require("./sum");
+const fetchData = require("./sum");
+//const myFunction = require("./sum");
+//const sum = require("./sum");
 /**
  * test function cotain a description
  * and
  * a arrow function
  */
+
+//Mathcer Testing Technique
 
 //writing test case for numaric addition
 // test('to pluse to is four', () => {
@@ -40,8 +44,25 @@ const myFunction = require("./sum");
 // });
 
 //writing test case for throw error
-test("throws on invalid input", () => {
-  expect(() => {
-    myFunction("jhfjhsfh");
-  }).toThrow();
+// test("throws on invalid input", () => {
+//   expect(() => {
+//     myFunction("jhfjhsfh");
+//   }).toThrow();
+// });
+
+/**
+ * Asynchronous Testing Technique
+ */
+
+//writing test case for call back function
+test("the data is Mauntain Deu", (done) => {
+  function callback(data) {
+    try {
+      expect(data).toBe("Mauntain Deu");
+      done();
+    } catch (error) {
+      done(error);
+    }
+  }
+  fetchData(callback);
 });
