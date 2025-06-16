@@ -1,4 +1,4 @@
-const fetchPromise = require("./sum");
+//const fetchPromise = require("./sum");
 //const fetchData = require("./sum");
 //const myFunction = require("./sum");
 //const sum = require("./sum");
@@ -89,4 +89,6 @@ const fetchPromise = require("./sum");
 test("implemention of a basic mock function", () => {
   const mock = jest.fn((x) => 42 + x);
   expect(mock(1)).toBe(43);
+  //passing argument for mock function
+  expect(mock).toHaveBeenCalledWith(1);
 });
