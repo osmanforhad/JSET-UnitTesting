@@ -27,7 +27,13 @@
 // });
 
 //writing test case for false value
-test("null is falsy", () => {
-  const n = null;
-  expect(n).toBeFalsy();
+// test("null is falsy", () => {
+//   const n = null;
+//   expect(n).toBeFalsy();
+// });
+
+//writing test case for true value
+test("one is truthy", () => {
+  const n = 1;
+  expect(n).toBeTruthy();
 });
